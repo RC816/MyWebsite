@@ -1,91 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- CSS Dependencies -->
-    <link rel="stylesheet" href="./css/dependency/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/dependency/shards.min.css">
-    <link rel="stylesheet" href="./css/common.css">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>地图</title>
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" rel="stylesheet">
 </head>
-<body>
-<nav class="navbar navbar-dark bg-dark navbar-expand-md border-bottom fixed-top">
-    <!-- Navbar content -->
-    <a class="navbar-brand" href="javascript:void(0)">CYT</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+<body class="fixed-nav bg-dark" id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">地图Demo</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+            aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="javascript:void(0)">首页 <span class="sr-only">(current)</span></a>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+            <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#data">
+                    <i class="fa fa-fw fa-dashboard"></i>
+                    <span class="nav-link-text">数据</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="data">
+                    <li>
+                        <a href="#">资源富集度</a>
+                    </li>
+                    <li>
+                        <a href="#">组织管理</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                <a class="nav-link" href="charts.html">
+                    <i class="fa fa-fw fa-area-chart"></i>
+                    <span class="nav-link-text">地图操作</span>
+                </a>
+            </li>
+            <li class="nav-item" data-toggle="tooltip" data-placement="right">
+                <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#systemManage">
+                    <i class="fa fa-fw fa-file"></i>
+                    <span class="nav-link-text">系统管理</span>
+                </a>
+                <ul class="sidenav-second-level collapse" id="systemManage">
+                    <li>
+                        <a href="login.html">用户列表</a>
+                    </li>
+                    <li>
+                        <a href="register.html">组织管理</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <form class="form-inline my-2 my-lg-0 mr-lg-2">
+                    <div class="input-group">
+                        <input class="form-control" type="text" placeholder="搜索">
+                        <span class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+              </span>
+                    </div>
+                </form>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">所有角色</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">卡牌一览</a>
+                <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fa fa-fw fa-sign-out"></i>登出</a>
             </li>
         </ul>
     </div>
 </nav>
-<div class="bg-light position-absolute w-100 main pt-5">
-    <div class="container pt-5 pb-2">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="jumbotron bg-white">
-                    <h1 class="display-4">欢迎</h1>
-                    <p class="lead">这是本人的测试页面，欢迎浏览</p>
-                    <hr class="my-4">
-                    <p>本网站将介绍一款卡牌游戏</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-4 pb-sm-4">
-                <div class="card">
-                    <img class="card-img-top" src="./image/3.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h4 class="card-title">英雄1</h4>
-                        <p class="card-text">他是第一个英雄</p>
-                        <a href="#" class="btn btn-primary">详情 &rarr;</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 pb-sm-4">
-                <div class="card">
-                    <img class="card-img-top" src="./image/3.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h4 class="card-title">英雄2</h4>
-                        <p class="card-text">他是第二个英雄</p>
-                        <a href="#" class="btn btn-primary">详情 &rarr;</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 pb-sm-4">
-                <div class="card">
-                    <img class="card-img-top" src="./image/3.jpg" alt="Card image cap">
-                    <div class="card-body">
-                        <h4 class="card-title">英雄3</h4>
-                        <p class="card-text">他是第三个英雄</p>
-                        <a href="#" class="btn btn-primary">详情 &rarr;</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
+<div class="content-wrapper pt-0" id="wrapper">
+    <div class="container-fluid h-100"  >
+        <div class="row "  id="dituContent"></div>
     </div>
-</div>
+    <!-- /.container-fluid-->
 
-<!-- Optional JavaScript -->
-<!-- JavaScript Dependencies: jQuery, Popper.js, Bootstrap JS, Shards JS -->
-<script src="./js/dependency/jquery-3.3.1.min.js"></script>
-<script src="./js/dependency/popper.min.js"></script>
-<script src="./js/dependency/bootstrap.min.js"></script>
-<script src="./js/dependency/shards.min.js"></script>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=C4c1d5dee199e59d0a540e3ff266aebf"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/index.js"></script>
+</div>
 </body>
+
 </html>
